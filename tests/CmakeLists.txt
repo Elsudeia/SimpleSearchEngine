@@ -1,0 +1,10 @@
+#[[
+add_executable (TestTest "TestSearchServer.cpp" "../src/SearchServer.cpp" "../src/ConvertJson.cpp" "../src/InvertedIndex.cpp")
+target_link_libraries (TestTest PRIVATE gtest gtest_main nlohmann_json)
+
+include(GoogleTest)
+gtest_discover_tests (TestTest)
+target_include_directories (TestTest PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+add_dependencies(TestTest copy_resources)
+]]

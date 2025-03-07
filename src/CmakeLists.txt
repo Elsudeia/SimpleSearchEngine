@@ -1,0 +1,7 @@
+add_executable(Simple_Search_Engine main.cpp ConvertJson.cpp InvertedIndex.cpp SearchServer.cpp)
+
+add_dependencies(Simple_Search_Engine copy_resources)
+
+target_link_libraries(Simple_Search_Engine PRIVATE nlohmann_json::nlohmann_json)
+
+target_include_directories(Simple_Search_Engine PRIVATE ${PROJECT_SOURCE_DIR}/include)
