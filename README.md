@@ -37,6 +37,7 @@ make
 Before running, ensure that the following files are in the project root directory:
 - **`config.json`** – List of document files.
 - **`requests.json`** – List of search queries.
+- You can change the file paths in ConvertJSON.h.
 
 If they are missing, the program will generate sample versions automatically.
 
